@@ -20,11 +20,6 @@ const brands = [
 ];
 
 export function CompassBrandsSection() {
-  // Row-major order: col 1 = indices 0,3,6; col 2 = 1,4,7; col 3 = 2,5,8
-  const col1 = [brands[0], brands[3], brands[6]];
-  const col2 = [brands[1], brands[4], brands[7]];
-  const col3 = [brands[2], brands[5], brands[8]];
-
   return (
     <section className="py-16 md:py-20 bg-white">
       <Container>
@@ -37,84 +32,40 @@ export function CompassBrandsSection() {
             DANH MỤC THƯƠNG HIỆU TOÀN CẦU
           </h2>
 
-          {/* Brand Cards Grid - 3 columns with explicit alignment */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 md:gap-x-6 gap-y-6 md:gap-y-8 mb-12">
-            {/* Column 1 - left aligned */}
-            <div className="flex flex-col items-start gap-y-6 md:gap-y-8">
-              {col1.map((brand, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl border border-gray-100 bg-white h-[190px] w-[260px] flex items-center justify-center shadow-sm p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
-                >
-                  <div className="relative w-[70%] h-[70%]">
-                    <Image
-                      src={brand.logo}
-                      alt={brand.name}
-                      fill
-                      className="object-contain"
-                      sizes="200px"
-                      priority
-                    />
-                  </div>
+          {/* Brand Cards Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+            {brands.map((brand, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-gray-100 bg-white h-[160px] sm:h-[180px] md:h-[190px] w-full flex items-center justify-center shadow-sm p-4 sm:p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
+              >
+                <div className="relative w-[70%] h-[70%]">
+                  <Image
+                    src={brand.logo}
+                    alt={brand.name}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    priority
+                  />
                 </div>
-              ))}
-            </div>
-            {/* Column 2 - center aligned */}
-            <div className="flex flex-col items-center gap-y-6 md:gap-y-8">
-              {col2.map((brand, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl border border-gray-100 bg-white h-[190px] w-[260px] flex items-center justify-center shadow-sm p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
-                >
-                  <div className="relative w-[70%] h-[70%]">
-                    <Image
-                      src={brand.logo}
-                      alt={brand.name}
-                      fill
-                      className="object-contain"
-                      sizes="200px"
-                      priority
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Column 3 - right aligned */}
-            <div className="flex flex-col items-end gap-y-6 md:gap-y-8">
-              {col3.map((brand, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl border border-gray-100 bg-white h-[190px] w-[260px] flex items-center justify-center shadow-sm p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
-                >
-                  <div className="relative w-[70%] h-[70%]">
-                    <Image
-                      src={brand.logo}
-                      alt={brand.name}
-                      fill
-                      className="object-contain"
-                      sizes="200px"
-                      priority
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Navigation Buttons - aligned to left & right columns */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 md:gap-x-6">
+          {/* Navigation Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <Button
               asChild
               variant="primary"
-              className="py-4 px-8 md:px-12 rounded-xl justify-self-start w-[280px]"
+              className="py-4 px-8 md:px-12 rounded-xl w-full sm:w-auto"
             >
               <Link href={`${ROUTES.aboutUs}/era-real-estate`}>Về ERA Real Estate</Link>
             </Button>
-            <div />
             <Button
               asChild
               variant="secondary"
-              className="py-4 px-8 md:px-12 rounded-xl justify-self-end w-[280px]"
+              className="py-4 px-8 md:px-12 rounded-xl w-full sm:w-auto"
             >
               <Link href="/">Về ERA Vietnam</Link>
             </Button>
