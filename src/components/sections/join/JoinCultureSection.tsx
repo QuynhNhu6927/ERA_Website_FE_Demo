@@ -108,8 +108,8 @@ export function JoinCultureSection() {
               "Làm việc trong không gian mở tiêu chuẩn quốc tế, khơi nguồn cảm hứng để bạn tự do phát huy tối đa năng lực cá nhân.",
               "Môi trường không khoảng cách giúp mọi ý tưởng đều được lắng nghe.",
             ]}
-            mainImage="/join/join_envi.jpg"
-            overlapImage="/join/join_envi_2.jpg"
+            mainImage="/join/join_envi.webp"
+            overlapImage="/join/join_envi_2.webp"
           />
 
           {/* Row 2: Văn hóa — text trái, ảnh phải */}
@@ -121,8 +121,8 @@ export function JoinCultureSection() {
               'Đề cao tinh thần "One ERA" gắn kết. Không có sự đơn độc, chúng tôi cùng nhau chủ động bứt phá và chinh phục mọi mục tiêu.',
               "Sự thành công của mỗi cá nhân là niềm tự hào của tập thể.",
             ]}
-            mainImage="/join/join_op_01.jpg"
-            overlapImage="/academy/aca_courses_int1.jpg"
+            mainImage="/join/join_op_01.webp"
+            overlapImage="/academy/aca_courses_int1.webp"
             reverse
           />
 
@@ -135,8 +135,8 @@ export function JoinCultureSection() {
               "Làm việc thông minh thay vì làm việc chăm chỉ.",
               "Ứng dụng hệ sinh thái số hóa toàn diện giúp Agent rút ngắn thời gian chốt deal, quản lý giỏ hàng và khách hàng mọi lúc mọi nơi.",
             ]}
-            mainImage="/join/join_tech.png"
-            overlapImage="/academy/aca_myera.png"
+            mainImage="/join/join_tech.webp"
+            overlapImage="/academy/aca_myera.webp"
             overlapClassName="bg-white object-contain"
           />
         </div>

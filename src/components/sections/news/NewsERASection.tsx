@@ -113,7 +113,7 @@ export const NewsERASection = memo(function NewsERASection() {
                       {featuredNews.excerpt}
                     </p>
                     <img
-                      src={`https://flagcdn.com/w40/${featuredNews.flagCode}.png`}
+                      src={`https://flagcdn.com/w40/${featuredNews.flagCode}.webp`}
                       alt=""
                       className="w-8 h-auto flex-shrink-0"
                     />
@@ -161,7 +161,7 @@ export const NewsERASection = memo(function NewsERASection() {
                     {item.time} • {item.readTime}
                   </p>
                   <img
-                    src={`https://flagcdn.com/w40/${item.flagCode}.png`}
+                    src={`https://flagcdn.com/w40/${item.flagCode}.webp`}
                     alt=""
                     className="w-6 h-auto mt-auto pt-2"
                   />

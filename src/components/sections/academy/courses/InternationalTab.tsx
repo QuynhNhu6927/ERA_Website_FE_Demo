@@ -18,7 +18,7 @@ export const internationalCourses: Course[] = [
     ],
     target: "Tất cả Agent.",
     btnVariant: "secondary",
-    image: "/academy/aca_courses_int1.jpg",
+    image: "/academy/aca_courses_int1.webp",
   },
   {
     id: 14,
@@ -35,7 +35,7 @@ export const internationalCourses: Course[] = [
     ],
     target: "Tất cả Agent.",
     btnVariant: "primary",
-    image: "/academy/aca_courses_int2.png",
+    image: "/academy/aca_courses_int2.webp",
   },
 ];
 

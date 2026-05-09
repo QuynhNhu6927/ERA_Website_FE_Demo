@@ -12,7 +12,7 @@ export function ApplyHeroSection() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/join/join_op_01.jpg')" }}
+        style={{ backgroundImage: "url('/join/join_op_01.webp')" }}
       />
       {/* Dark Overlay */}
       <div

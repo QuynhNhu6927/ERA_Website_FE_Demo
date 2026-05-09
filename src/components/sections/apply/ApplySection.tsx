@@ -202,7 +202,7 @@ export function ApplySection() {
             <div className="hidden lg:block h-full">
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg bg-gray-100">
                 <Image
-                  src="/join/aca_join_section.png"
+                  src="/join/aca_join_section.webp"
                   alt="ERA Team"
                   fill
                   className="object-cover rounded-2xl"

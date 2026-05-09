@@ -49,7 +49,7 @@ export function JoinTeamSection() {
       {/* Background Image Section */}
       <div className="px-4 md:px-0 pt-4 md:pt-0">
         <div 
-          className="relative h-[240px] sm:h-[280px] md:h-[500px] bg-cover bg-center rounded-2xl md:rounded-none overflow-hidden bg-[url('/home/home_join_mb.png')] md:bg-[url('/home/home_join.png')]"
+          className="relative h-[240px] sm:h-[280px] md:h-[500px] bg-cover bg-center rounded-2xl md:rounded-none overflow-hidden bg-[url('/home/home_join_mb.webp')] md:bg-[url('/home/home_join.webp')]"
         >
           {/* Overlay */}
           <div 

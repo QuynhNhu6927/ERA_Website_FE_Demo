@@ -161,7 +161,7 @@ export function ContactFormSection() {
           <div className="row-start-3 lg:row-start-2 lg:col-start-1 rounded-3xl overflow-hidden flex flex-col flex-1 min-h-0">
             <div className="relative w-full" style={{ aspectRatio: '16/6' }}>
               <img
-                src="/contact/contact_inbox_form.jpg"
+                src="/contact/contact_inbox_form.webp"
                 alt="ERA Vietnam Team"
                 className="absolute inset-0 w-full h-full object-cover"
               />

@@ -12,19 +12,19 @@ interface OrbitItem {
 
 const RING_INNER_ITEMS: OrbitItem[] = [
   {
-    logo: "/join/join_era.png",
+    logo: "/join/join_era.webp",
     title: "ERA REAL ESTATE",
     description:
       "Tiên phong công nghệ, nhạy bén thời cuộc. Mạng lưới hiện đại trao quyền cho các nhà môi giới thế hệ mới, tối ưu hóa giao dịch trên toàn cầu.",
   },
   {
-    logo: "/join/join_coldwell_banker.png",
+    logo: "/join/join_coldwell_banker.webp",
     title: "COLDWELL BANKER",
     description:
       "Di sản vĩ đại hơn một thế kỉ. Biểu tượng kinh điển của sự tin cậy, dẫn dắt những chuẩn mực khắt khe nhất trong dịch vụ môi giới chuyên nghiệp.",
   },
   {
-    logo: "/join/join_century_21.png",
+    logo: "/join/join_century_21.webp",
     title: "CENTURY 21",
     description:
       "'Tiêu chuẩn vàng' của ngành môi giới. Sức mạnh nhận diện vô song cùng mạng lưới chuyên gia tận tâm, bức phá mọi giới hạn tại hơn 86 quốc gia.",
@@ -33,22 +33,22 @@ const RING_INNER_ITEMS: OrbitItem[] = [
 
 const RING_OUTER_ITEMS: OrbitItem[] = [
   {
-    logo: "/join/join_sothebys.png",
+    logo: "/join/join_sothebys.webp",
     title: "SOTHEBY'S",
     description: "Kế thừa di sản từ nhà đấu giá lừng danh. Đặc quyền kết nối giới siêu giàu toàn cầu với những kiệt tác bất động sản mang tính biểu tưởng.",
   },
   {
-    logo: "/join/join_croran.png",
+    logo: "/join/join_croran.webp",
     title: "CORCORAN",
     description: "Tôn vinh phong cách sống độc bảnbản. Dịch vụ môi giới 'may đo' cao cấp, thấu hiểu sâu sắc gu thẩm mỹ của giới tinh hoa thành thị.",
   },
   {
-    logo: "/join/join_christies.png",
+    logo: "/join/join_christies.webp",
     title: "CHRISTIE'S",
     description: "Nơi kiến trúc giao thoa cùng nghệ thuật. Mạng lưới môi giới độc quyền chỉ dành riêng cho các dinh thự xa hoa và báu vật triệu đô.",
   },
   {
-    logo: "/join/join_better_homes.png",
+    logo: "/join/join_better_homes.webp",
     title: "BETTER HOMES",
     description: "Hơn cả một giao dịch bất động sản. Thương hiệu truyền cảm hứng, định hình phong cách sống và kiến tạo những không gian tổ ấm đích thực.",
   },
@@ -184,7 +184,7 @@ export function CompassOrbit() {
         }}
       >
         <Image
-          src="/about/about_compass_inter.png"
+          src="/about/about_compass_inter.webp"
           alt="Compass"
           width={120}
           height={120}

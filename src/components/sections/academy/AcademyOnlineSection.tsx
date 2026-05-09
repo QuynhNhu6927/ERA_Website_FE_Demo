@@ -20,7 +20,7 @@ const lessons = [
     title: "Bài 01: Giới thiệu về tầm quan trọng của hình ảnh & video trong bất động sản",
     duration: "01:22",
     locked: false,
-    thumbnail: "/academy/aca_online_free_course.jpg",
+    thumbnail: "/academy/aca_online_free_course.webp",
   },
   {
     id: 2,

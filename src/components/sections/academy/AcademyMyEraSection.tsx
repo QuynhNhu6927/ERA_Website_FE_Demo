@@ -12,7 +12,7 @@ export function AcademyMyEraSection() {
         {/* Left: Phone Image */}
         <div className="relative flex justify-center">
           <Image
-            src="/academy/aca_myera.png"
+            src="/academy/aca_myera.webp"
             alt="MYERA App"
             width={400}
             height={500}
@@ -55,7 +55,7 @@ export function AcademyMyEraSection() {
           <div className="flex flex-wrap gap-4 mb-8">
             <a href="#" className="inline-block transition-opacity hover:opacity-90">
               <Image
-                src="/academy/aca_myera_ios.png"
+                src="/academy/aca_myera_ios.webp"
                 alt="Download on the App Store"
                 width={140}
                 height={42}
@@ -65,7 +65,7 @@ export function AcademyMyEraSection() {
             </a>
             <a href="#" className="inline-block transition-opacity hover:opacity-90">
               <Image
-                src="/academy/aca_myera_and.png"
+                src="/academy/aca_myera_and.webp"
                 alt="Get it on Google Play"
                 width={140}
                 height={42}
