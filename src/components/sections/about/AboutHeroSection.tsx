@@ -5,6 +5,7 @@ import ROUTES from "@/lib/routes";
 import { colors } from "@/lib/theme";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 export function AboutHeroSection() {
   return (
@@ -12,7 +13,7 @@ export function AboutHeroSection() {
       className="relative min-h-[500px] md:min-h-[550px] flex items-end md:items-center"
       style={{
         backgroundImage:
-          "linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.4)), url('/about/about_hero_banner.png')",
+          "linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.4)), url('/about/about_hero_banner.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -45,21 +46,11 @@ export function AboutHeroSection() {
             </p>
           </div>
 
-          <Link
-            href={ROUTES.compass}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all hover:shadow-lg flex-shrink-0 w-full md:w-auto"
-            style={{ backgroundColor: colors.primary.DEFAULT }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                colors.primary.dark.DEFAULT;
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                colors.primary.DEFAULT;
-            }}
-          >
-            Tìm hiểu về Compass <ArrowRight size={16} />
-          </Link>
+          <Button asChild variant="primary" className="rounded-full font-semibold flex-shrink-0 w-full md:w-auto">
+            <Link href={ROUTES.compass}>
+              Tìm hiểu về Compass <ArrowRight size={16} />
+            </Link>
+          </Button>
         </div>
       </Container>
     </section>

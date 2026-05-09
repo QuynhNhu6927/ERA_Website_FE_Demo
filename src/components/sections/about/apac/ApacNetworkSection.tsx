@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { colors } from "@/lib/theme";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 export function ApacNetworkSection() {
   return (
@@ -29,7 +30,7 @@ export function ApacNetworkSection() {
         {/* Map image */}
         <div className="relative w-full md:max-w-4xl mx-auto aspect-[4/3] md:aspect-[16/9] md:rounded-2xl overflow-hidden">
           <Image
-            src="/about/about_apac_map.png"
+            src="/about/about_apac_map.webp"
             alt="ERA APAC Network Map"
             fill
             className="object-contain"
@@ -54,7 +55,7 @@ export function ApacNetworkSection() {
             <div className="relative w-full max-w-[500px]">
               <div className="relative aspect-[4/3] md:aspect-[1/1] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
                 <Image
-                  src="/about/about_apac_img.png"
+                  src="/about/about_apac_img.webp"
                   alt="ERA Singapore"
                   fill
                   className="object-cover"
@@ -123,36 +124,16 @@ export function ApacNetworkSection() {
 
         {/* Buttons */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-12 mt-8 md:mt-12">
-          <Link
-            href="/ve-chung-toi/era-real-estate"
-            className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-white transition-all hover:shadow-lg w-full"
-            style={{ backgroundColor: colors.primary.DEFAULT }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                colors.primary.dark.DEFAULT;
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                colors.primary.DEFAULT;
-            }}
-          >
-            Về ERA REAL ESTATE
-          </Link>
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-white transition-all hover:shadow-lg w-full"
-            style={{ backgroundColor: colors.primary.navy.DEFAULT }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                "#0a0a33";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                colors.primary.navy.DEFAULT;
-            }}
-          >
-            Về ERA Vietnam
-          </Link>
+          <Button asChild variant="primary" className="rounded-xl py-4 font-semibold w-full">
+            <Link href="/ve-chung-toi/era-real-estate">
+              Về ERA REAL ESTATE
+            </Link>
+          </Button>
+          <Button asChild variant="secondary" className="rounded-xl py-4 font-semibold w-full">
+            <Link href="/">
+              Về ERA Vietnam
+            </Link>
+          </Button>
         </div>
       </Container>
     </section>

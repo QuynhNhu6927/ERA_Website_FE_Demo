@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { colors } from "@/lib/theme";
 
 const divisions = [
@@ -69,12 +70,12 @@ export default function AboutERAVNDivisionsSection() {
         </div>
 
         <div className="text-center mt-10">
-          <button className="text-sm font-medium flex items-center gap-1 mx-auto hover:underline" style={{ color: colors.primary.DEFAULT }}>
+          <Button variant="ghost" className="text-sm font-medium hover:underline mx-auto" style={{ color: colors.primary.DEFAULT }}>
             Xem thêm
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
-          </button>
+          </Button>
         </div>
       </Container>
     </Section>
