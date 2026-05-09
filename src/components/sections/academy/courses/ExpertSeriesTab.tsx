@@ -24,7 +24,7 @@ export const expertCourses: Course[] = [
     ],
     target: "Agent mới hoặc Agent muốn đi sâu vào thị trường Thứ cấp.",
     btnVariant: "primary",
-    image: "/academy/aca_courses_ex.png",
+    image: "/academy/aca_courses_ex.webp",
   },
   {
     id: 6,

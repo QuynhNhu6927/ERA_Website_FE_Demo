@@ -12,7 +12,7 @@ export const NewsHeroSection = memo(function NewsHeroSection() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('/news/news_banner.jpg')`,
+              backgroundImage: `url('/news/news_banner.webp')`,
             }}
           />
 

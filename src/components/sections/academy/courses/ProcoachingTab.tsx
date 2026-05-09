@@ -26,7 +26,7 @@ export const procoachingCourses: Course[] = [
     ],
     target: "Tất cả Agent.",
     btnVariant: "secondary",
-    image: "/academy/aca_courses_int_02.png",
+    image: "/academy/aca_courses_int_02.webp",
   },
   {
     id: 12,
@@ -52,7 +52,7 @@ export const procoachingCourses: Course[] = [
     ],
     target: "Tất cả Agent.",
     btnVariant: "primary",
-    image: "/academy/aca_courses_int_02.png",
+    image: "/academy/aca_courses_int_02.webp",
   },
 ];
 

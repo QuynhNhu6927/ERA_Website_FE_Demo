@@ -17,7 +17,7 @@ export function JoinHeroSection() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/join/join_hero_bg.png')" }}
+        style={{ backgroundImage: "url('/join/join_hero_bg.webp')" }}
       />
       {/* Light gray overlay */}
       <div
@@ -77,7 +77,7 @@ export function JoinHeroSection() {
           <div className="absolute bottom-0 right-0 z-10 w-[80%] md:w-[60%] lg:w-[50%] max-w-2xl">
             <div className="relative aspect-[4/3]">
               <Image
-                src="/join/join_hero_img.png"
+                src="/join/join_hero_img.webp"
                 alt="ERA Team"
                 fill
                 className="object-contain object-bottom-right"

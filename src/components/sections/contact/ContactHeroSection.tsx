@@ -11,7 +11,7 @@ export function ContactHeroSection() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('/contact/contact_hero_banner.jpg')`,
+              backgroundImage: `url('/contact/contact_hero_banner.webp')`,
             }}
           />
 

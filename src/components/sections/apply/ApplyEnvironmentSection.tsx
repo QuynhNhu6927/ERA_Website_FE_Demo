@@ -7,10 +7,10 @@ import { colors } from "@/lib/theme";
 import { ApplyGalleryModal } from "./ApplyGalleryModal";
 
 const galleryImages = [
-  "/join/join_envi_1.jpg",
-  "/join/join_envi_3.jpg",
-  "/join/join_envi_2.jpg",
-  "/join/join_envi_4.jpg",
+  "/join/join_envi_1.webp",
+  "/join/join_envi_3.webp",
+  "/join/join_envi_2.webp",
+  "/join/join_envi_4.webp",
   "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800",
   "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800",
   "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",

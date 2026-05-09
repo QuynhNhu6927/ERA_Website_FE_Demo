@@ -9,20 +9,20 @@ import { colors, withOpacity } from "@/lib/theme";
 const slides = [
   {
     id: 1,
-    image: "/home/home_banner_hero_1.png",
-    imageMobile: "/home/home_banner_hero_1_mb.jpg",
+    image: "/home/home_banner_hero_1.webp",
+    imageMobile: "/home/home_banner_hero_1_mb.webp",
     alt: "ERA Vietnam Team",
   },
   {
     id: 2,
-    image: "/home/home_banner_hero_2.png",
-    imageMobile: "/home/home_banner_hero_2_mb.jpg",
+    image: "/home/home_banner_hero_2.webp",
+    imageMobile: "/home/home_banner_hero_2_mb.webp",
     alt: "ERA Vietnam Projects",
   },
   {
     id: 3,
-    image: "/home/home_banner_hero_1.png",
-    imageMobile: "/home/home_banner_hero_1_mb.jpg",
+    image: "/home/home_banner_hero_1.webp",
+    imageMobile: "/home/home_banner_hero_1_mb.webp",
     alt: "ERA Vietnam Projects",
   },
 ];

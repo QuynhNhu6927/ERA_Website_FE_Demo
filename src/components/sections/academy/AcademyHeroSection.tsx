@@ -9,7 +9,7 @@ export function AcademyHeroSection() {
         <div 
           className="relative h-[420px] md:h-[480px] overflow-hidden md:rounded-3xl"
           style={{
-            backgroundImage: "url('/academy/academy_banner.jpg')",
+            backgroundImage: "url('/academy/academy_banner.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
