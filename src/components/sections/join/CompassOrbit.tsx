@@ -130,7 +130,8 @@ function OrbitRing({ radius, items, duration, reverse = false, paused, onPauseCh
                     />
                   </div>
 
-                  {/* Tooltip */}
+                  {/* Tooltip — temporarily hidden */}
+                  {/*
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-5 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div
                       className="relative rounded-xl shadow-xl border bg-white overflow-hidden"
@@ -149,11 +150,11 @@ function OrbitRing({ radius, items, duration, reverse = false, paused, onPauseCh
                         {item.description}
                       </div>
                     </div>
-                    {/* Arrow */}
                     <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1.5">
                       <div className="w-3 h-3 rotate-45 bg-white" />
                     </div>
                   </div>
+                  */}
                 </div>
               </div>
             </div>
@@ -183,7 +184,7 @@ export function CompassOrbit() {
         }}
       >
         <Image
-          src="/join/compass.png"
+          src="/about/about_compass_inter.png"
           alt="Compass"
           width={120}
           height={120}

@@ -29,15 +29,17 @@ export function CompassBrandsSection() {
             className="text-center text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide mb-12"
             style={{ color: colors.primary.DEFAULT }}
           >
-            DANH MỤC THƯƠNG HIỆU TOÀN CẦU
+            DANH MỤC
+            <br />
+            THƯƠNG HIỆU TOÀN CẦU
           </h2>
 
           {/* Brand Cards Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+          <div className="grid grid-cols-3 gap-3 md:gap-6 mb-12">
             {brands.map((brand, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-gray-100 bg-white h-[160px] sm:h-[180px] md:h-[190px] w-full flex items-center justify-center shadow-sm p-4 sm:p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                className="rounded-2xl border border-gray-100 bg-white h-[100px] sm:h-[140px] md:h-[190px] w-full flex items-center justify-center shadow-sm p-2 sm:p-4 md:p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
               >
                 <div className="relative w-[70%] h-[70%]">
                   <Image

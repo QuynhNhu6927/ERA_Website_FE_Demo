@@ -18,7 +18,7 @@ export function CompassHeroSection() {
     "Bằng cách kết hợp mạng lưới nhượng quyền thương hiệu rộng khắp của Anywhere với nền tảng công nghệ môi giới đột phá của Compass, chúng tôi đang từng bước tái định nghĩa chuẩn mực của ngành môi giới toàn cầu, tối ưu hóa mọi trải nghiệm giao dịch thông qua sức mạnh của dữ liệu và công nghệ.";
 
   return (
-    <section className="relative min-h-[400px] md:min-h-[500px]">
+    <section className="relative min-h-[400px] md:min-h-[500px] pt-16">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -31,7 +31,7 @@ export function CompassHeroSection() {
       />
 
       <Container className="relative z-10">
-        <div className="flex flex-col items-center pt-16 md:pt-20 pb-16 md:pb-24 px-4">
+        <div className="flex flex-col items-center pt-16 md:pt-12 pb-16 md:pb-24 px-4">
           {/* Logo image + intro text */}
           <div className="text-center mb-10 md:mb-14">
             <div className="relative w-64 h-16 md:w-96 md:h-24 mx-auto">
@@ -55,8 +55,8 @@ export function CompassHeroSection() {
             </p>
           </div>
 
-          {/* Merge Animation (loop) */}
-          <div>
+          {/* Merge Animation (loop) — desktop only */}
+          <div className="hidden md:block">
             <CompassMergeAnimation cycle={cycle} />
           </div>
         </div>

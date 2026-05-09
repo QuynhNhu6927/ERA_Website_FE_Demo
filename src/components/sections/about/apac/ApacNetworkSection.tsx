@@ -7,15 +7,18 @@ import Link from "next/link";
 
 export function ApacNetworkSection() {
   return (
-    <section className="pt-24 md:pt-32 pb-16 md:pb-24 bg-white">
+    <section className="pt-16 md:pt-32 pb-12 md:pb-24 bg-white">
       <Container size="lg">
         {/* Title */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight">
+          <h2 className="text-xl md:text-4xl font-bold leading-tight">
             <span style={{ color: colors.primary.navy.DEFAULT }}>
               MẠNG LƯỚI{" "}
             </span>
-            <span style={{ color: colors.primary.DEFAULT }}>ERA TẠI</span>
+            <span style={{ color: colors.primary.DEFAULT }}>ERA{" "}</span>
+            <span style={{ color: colors.primary.navy.DEFAULT }}>
+              TẠI {" "}
+            </span>
             <br />
             <span style={{ color: colors.primary.navy.DEFAULT }}>
               CHÂU Á - THÁI BÌNH DƯƠNG
@@ -24,7 +27,7 @@ export function ApacNetworkSection() {
         </div>
 
         {/* Map image */}
-        <div className="relative w-full max-w-4xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden">
+        <div className="relative w-full md:max-w-4xl mx-auto aspect-[4/3] md:aspect-[16/9] md:rounded-2xl overflow-hidden">
           <Image
             src="/about/about_apac_map.png"
             alt="ERA APAC Network Map"
@@ -32,14 +35,24 @@ export function ApacNetworkSection() {
             className="object-contain"
             sizes="(max-width: 1024px) 100vw, 900px"
           />
+          {/* Badge — mobile only, bottom-left of map */}
+          <div
+            className="md:hidden absolute bottom-2 left-0 px-3 py-2 rounded-xl text-white text-center shadow-lg"
+            style={{ backgroundColor: colors.primary.DEFAULT }}
+          >
+            <span className="text-xl font-extrabold block">45 NĂM</span>
+            <span className="text-[10px] font-medium uppercase leading-tight block mt-0.5">
+              KIẾN TẠO TẠI<br />ĐẢO QUỐC SƯ TỬ
+            </span>
+          </div>
         </div>
 
         {/* Singapore info */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10 items-center">
           {/* Image */}
-          <div className="flex justify-center mt-[-80px] md:mt-[-120px] relative z-10">
+          <div className="flex justify-center md:mt-[-120px] relative z-10">
             <div className="relative w-full max-w-[500px]">
-              <div className="relative aspect-[1/1] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+              <div className="relative aspect-[4/3] md:aspect-[1/1] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
                 <Image
                   src="/about/about_apac_img.png"
                   alt="ERA Singapore"
@@ -48,9 +61,9 @@ export function ApacNetworkSection() {
                   sizes="(max-width: 1024px) 100vw, 500px"
                 />
               </div>
-              {/* Badge */}
+              {/* Badge — desktop only, on Singapore image */}
               <div
-                className="absolute bottom-4 left-4 md:top-0 md:right-0 md:bottom-auto md:left-auto md:translate-x-[40%] md:translate-y-[30%] px-5 py-3 rounded-lg text-white text-left shadow-lg"
+                className="hidden md:block absolute top-0 right-0 translate-x-[40%] translate-y-[30%] px-5 py-3 rounded-lg text-white text-left shadow-lg"
                 style={{ backgroundColor: colors.primary.DEFAULT }}
               >
                 <span className="text-xl md:text-2xl font-extrabold block">
@@ -65,14 +78,20 @@ export function ApacNetworkSection() {
 
           {/* Text */}
           <div className="text-center lg:text-left">
+            {/* Mobile title */}
+            <h3 className="md:hidden text-2xl md:text-3xl font-bold">
+              <span style={{ color: colors.primary.DEFAULT }}>ERA </span>
+              <span style={{ color: colors.primary.navy.DEFAULT }}>SINGAPORE</span>
+            </h3>
+            {/* Desktop title — navy */}
             <h3
-              className="text-2xl md:text-3xl font-bold"
+              className="hidden md:block text-2xl md:text-3xl font-bold"
               style={{ color: colors.primary.navy.DEFAULT }}
             >
               ERA SINGAPORE
             </h3>
             <p
-              className="text-lg md:text-xl font-semibold mt-1"
+              className="text-lg md:text-xl font-bold mt-1"
               style={{ color: colors.primary.DEFAULT }}
             >
               TRỤ SỞ CHÍNH KHU VỰC APAC

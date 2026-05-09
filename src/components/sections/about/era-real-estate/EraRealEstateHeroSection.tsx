@@ -26,7 +26,7 @@ function StatCard({ value, label }: { value: string; label: string }) {
 export function EraRealEstateHeroSection() {
   return (
     <>
-      <section className="relative h-[420px] md:h-[500px] overflow-visible flex items-end">
+      <section className="relative min-h-[500px] md:h-[500px] overflow-visible flex items-end">
         {/* Background with bottom gradient */}
         <div
           className="absolute inset-0"
@@ -55,6 +55,15 @@ export function EraRealEstateHeroSection() {
                 hoa.
               </p>
             </div>
+          </div>
+
+          {/* Title — mobile only */}
+          <div className="md:hidden pb-0 text-center">
+            <h1 className="text-2xl font-extrabold text-white leading-tight">
+              MẠNG LƯỚI TOÀN CẦU
+              <br />
+              CỦA ERA REAL ESTATE
+            </h1>
           </div>
 
           {/* Stats — mobile: row 1 (2 cards half in/half out) */}
