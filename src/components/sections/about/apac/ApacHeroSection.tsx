@@ -9,28 +9,40 @@ const stats = [
   { value: "21,000+", label: "AGENTS" },
 ];
 
+function StatCard({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="bg-white rounded-2xl p-5 md:p-6 text-center shadow-lg h-full flex flex-col justify-center">
+      <p className="text-2xl md:text-3xl font-extrabold" style={{ color: colors.primary.DEFAULT }}>
+        {value}
+      </p>
+      <p className="text-xs text-gray-600 mt-1 whitespace-pre-line font-medium uppercase tracking-wide">
+        {label}
+      </p>
+    </div>
+  );
+}
+
 export function ApacHeroSection() {
   return (
-    <section className="relative min-h-[400px] md:min-h-[500px] overflow-visible">
-      {/* Background with bottom gradient */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 30%, transparent 85%), url('/about/about_section02.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+    <>
+      <section className="relative min-h-[500px] md:h-[500px] overflow-visible flex items-end">
+        {/* Background with bottom gradient */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 30%, transparent 85%), url('/about/about_section02.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
 
-      {/* Content anchored to bottom */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <Container size="lg">
+        <Container size="lg" className="relative z-10 w-full pb-0">
           {/* Title + description — desktop */}
           <div className="hidden md:block pb-4">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div>
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
+                <h1 className="text-3xl lg:text-4xl font-extrabold text-white leading-tight">
                   ERA CHÂU Á THÁI BÌNH
                   <br />
                   DƯƠNG - APAC REALTY
@@ -45,7 +57,7 @@ export function ApacHeroSection() {
           </div>
 
           {/* Title — mobile only */}
-          <div className="md:hidden pb-4">
+          <div className="md:hidden pb-0 text-center">
             <h1 className="text-2xl font-extrabold text-white leading-tight">
               ERA CHÂU Á THÁI BÌNH
               <br />
@@ -53,27 +65,30 @@ export function ApacHeroSection() {
             </h1>
           </div>
 
-          {/* Stats — mobile: 1 col, desktop: 3 cols with translate-y-1/2 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto pb-8 md:pb-0 md:translate-y-1/2">
+          {/* Stats — mobile: card 1 half in/half out */}
+          <div className="md:hidden translate-y-1/2">
+            <StatCard value={stats[0].value} label={stats[0].label} />
+          </div>
+
+          {/* Stats — desktop: 1 row 3 cols */}
+          <div className="hidden md:grid grid-cols-3 gap-4 translate-y-1/2 relative z-10">
             {stats.map((s, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl p-5 md:p-6 text-center shadow-lg"
-              >
-                <p
-                  className="text-2xl md:text-3xl font-extrabold"
-                  style={{ color: colors.primary.DEFAULT }}
-                >
-                  {s.value}
-                </p>
-                <p className="text-xs text-gray-600 mt-1 whitespace-pre-line font-medium uppercase tracking-wide">
-                  {s.label}
-                </p>
-              </div>
+              <StatCard key={i} value={s.value} label={s.label} />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Stats — mobile: cards 2 & 3 fully outside hero */}
+      <div className="md:hidden bg-white pt-20 pb-8">
+        <Container size="lg">
+          <div className="grid grid-cols-1 gap-3 auto-rows-[1fr]">
+            {stats.slice(1, 3).map((s, i) => (
+              <StatCard key={i} value={s.value} label={s.label} />
             ))}
           </div>
         </Container>
       </div>
-    </section>
+    </>
   );
 }
