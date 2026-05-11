@@ -10,6 +10,7 @@ export const ROUTES = {
   compass: "/ve-chung-toi/compass",
   apac: "/ve-chung-toi/apac",
   era: "/ve-chung-toi/era-real-estate",
+  eraVn: "/ve-chung-toi/ve-era-viet-nam",
   //projects: "/du-an",
   join: "/gia-nhap",
   apply: "/ung-tuyen",

@@ -1,9 +1,12 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { colors } from "@/lib/theme";
+import Image from "next/image";
+import { ApplyGalleryModal } from "../../apply/ApplyGalleryModal";
 
 const activities = [
   {
@@ -39,9 +42,24 @@ const activities = [
   },
 ];
 
+const esgImages = [
+  "/about/about_ESG_01.webp",
+  "/about/about_ESG_02.webp",
+  "/about/about_ESG_03.webp",
+  "/about/about_ESG_04.webp",
+];
+
 export default function AboutERAVNESGSection() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openGallery = useCallback((index: number) => {
+    setCurrentIndex(index);
+    setIsOpen(true);
+  }, []);
+
   return (
-    <Section id="esg" padding="md" bg="gray" className="bg-gray-50/50" noContainer>
+    <Section id="esg" padding="md" bg="gray">
       <Container size="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Content */}
@@ -87,7 +105,7 @@ export default function AboutERAVNESGSection() {
             </div>
           </motion.div>
 
-          {/* Image Placeholders */}
+          {/* Images */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -95,41 +113,42 @@ export default function AboutERAVNESGSection() {
             transition={{ duration: 0.7 }}
             className="space-y-4"
           >
-            <div className="rounded-2xl overflow-hidden shadow-lg h-64 flex items-center justify-center bg-gray-100">
-              <div className="text-center">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke={colors.secondary.DEFAULT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <path d="M21 15l-5-5L5 21" />
-                </svg>
-                <p className="mt-2 text-xs font-medium text-gray-400">Ảnh CSR</p>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl overflow-hidden shadow-lg h-40 flex items-center justify-center bg-gray-100">
-                <div className="text-center">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={colors.secondary.DEFAULT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <path d="M21 15l-5-5L5 21" />
-                  </svg>
-                  <p className="mt-1 text-[10px] font-medium text-gray-400">Hoạt động</p>
-                </div>
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-lg h-40 flex items-center justify-center bg-gray-100">
-                <div className="text-center">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={colors.secondary.DEFAULT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <path d="M21 15l-5-5L5 21" />
-                  </svg>
-                  <p className="mt-1 text-[10px] font-medium text-gray-400">Cộng đồng</p>
-                </div>
-              </div>
+            <button
+              onClick={() => openGallery(0)}
+              className="w-full text-left rounded-2xl overflow-hidden shadow-lg relative aspect-[2/1] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              <Image src={esgImages[0]} alt="ESG 1" fill className="object-cover" />
+            </button>
+            <div className="grid grid-cols-[1fr_1.5fr] gap-2 grid-rows-2">
+              <button
+                onClick={() => openGallery(1)}
+                className="text-left rounded-2xl overflow-hidden shadow-lg relative aspect-[16/7] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <Image src={esgImages[1]} alt="ESG 2" fill className="object-cover" />
+              </button>
+              <button
+                onClick={() => openGallery(2)}
+                className="text-left rounded-2xl overflow-hidden shadow-lg relative row-span-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <Image src={esgImages[2]} alt="ESG 3" fill className="object-cover" />
+              </button>
+              <button
+                onClick={() => openGallery(3)}
+                className="text-left rounded-2xl overflow-hidden shadow-lg relative aspect-[16/7] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <Image src={esgImages[3]} alt="ESG 4" fill className="object-cover" />
+              </button>
             </div>
           </motion.div>
         </div>
       </Container>
+
+      <ApplyGalleryModal
+        images={esgImages}
+        currentIndex={currentIndex}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      />
     </Section>
   );
 }

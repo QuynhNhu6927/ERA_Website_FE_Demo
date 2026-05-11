@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { colors } from "@/lib/theme";
 import { Printer, Globe, Handshake, User } from "lucide-react";
 
@@ -29,8 +29,7 @@ const milestones = [
 
 export function EraRealEstatePioneerSection() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <Container size="lg">
+    <Section bg="white" padding="none" className="py-16 md:py-24" containerClassName="max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold leading-tight">
             <span style={{ color: colors.primary.navy.DEFAULT }}>
@@ -63,7 +62,6 @@ export function EraRealEstatePioneerSection() {
             </div>
           ))}
         </div>
-      </Container>
-    </section>
+    </Section>
   );
 }

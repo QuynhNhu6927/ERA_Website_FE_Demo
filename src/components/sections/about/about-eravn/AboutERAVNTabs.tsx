@@ -7,7 +7,6 @@ const tabs = [
   { id: "about", label: "Về ERA Vietnam" },
   { id: "philosophy", label: "Triết lý kinh doanh" },
   { id: "services", label: "Lĩnh vực hoạt động" },
-  { id: "core", label: "Năng lực cốt lõi" },
   { id: "divisions", label: "Đội ngũ Divisions" },
   { id: "awards", label: "Vinh danh" },
   { id: "esg", label: "ESG & CSR" },
@@ -20,7 +19,7 @@ interface AboutERAVNTabsProps {
 
 export default function AboutERAVNTabs({ activeTab, onTabChange }: AboutERAVNTabsProps) {
   return (
-    <div className="bg-white shadow-sm pt-16 md:pt-20">
+    <div className="bg-gray-50 shadow-sm pt-20 md:pt-30">
       <div className="overflow-hidden">
         <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-4 lg:gap-6 px-4 sm:px-8 lg:px-10 py-3 mx-auto max-w-6xl">
           {tabs.map((tab) => (

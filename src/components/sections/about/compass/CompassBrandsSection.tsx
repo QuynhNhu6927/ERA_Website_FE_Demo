@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { colors } from "@/lib/theme";
 import { ROUTES } from "@/lib/routes";
@@ -21,8 +21,7 @@ const brands = [
 
 export function CompassBrandsSection() {
   return (
-    <section className="py-16 md:py-20 bg-white">
-      <Container>
+    <Section bg="white" padding="md">
         <div className="px-4">
           {/* Section Title */}
           <h2
@@ -73,7 +72,6 @@ export function CompassBrandsSection() {
             </Button>
           </div>
         </div>
-      </Container>
-    </section>
+    </Section>
   );
 }

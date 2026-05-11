@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { colors } from "@/lib/theme";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -9,8 +9,7 @@ import ROUTES from "@/lib/routes";
 
 export function AboutEraGlobalSection() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <Container size="lg">
+    <Section bg="white" padding="none" className="py-16 md:py-24" containerClassName="max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10 items-center">
           {/* Text */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
@@ -80,7 +79,6 @@ export function AboutEraGlobalSection() {
             </div>
           </div>
         </div>
-      </Container>
-    </section>
+    </Section>
   );
 }
