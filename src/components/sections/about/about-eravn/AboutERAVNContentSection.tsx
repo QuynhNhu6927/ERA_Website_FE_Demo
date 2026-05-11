@@ -8,7 +8,7 @@ import { colors } from "@/lib/theme";
 
 export default function AboutERAVNContentSection() {
   return (
-    <Section id="about" padding="md" bg="white" noContainer>
+    <Section id="about" padding="md" bg="gray" noContainer>
       <Container size="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           {/* Image + Badge */}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { colors } from "@/lib/theme";
 
@@ -42,8 +42,7 @@ export default function NewsManageSection() {
     "w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-3.5 text-gray-800 placeholder:text-gray-400 transition-all duration-200 outline-none focus:border-[#C8102E] focus:ring-4 focus:ring-[#C8102E]/10";
 
   return (
-    <section className="min-h-screen bg-gray-50/50 py-12 md:py-16">
-      <Container size="md">
+    <Section bg="none" padding="sm" className="min-h-screen bg-gray-50/50" containerClassName="max-w-4xl">
         {/* Header */}
         <div className="mb-10">
           <p
@@ -201,7 +200,6 @@ export default function NewsManageSection() {
             </div>
           </div>
         </div>
-      </Container>
-    </section>
+    </Section>
   );
 }

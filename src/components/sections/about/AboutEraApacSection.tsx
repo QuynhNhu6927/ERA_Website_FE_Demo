@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { colors } from "@/lib/theme";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -9,8 +9,7 @@ import ROUTES from "@/lib/routes";
 
 export function AboutEraApacSection() {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
-      <Container size="lg">
+    <Section bg="gray" padding="none" className="py-16 md:py-24" containerClassName="max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10 items-center">
           {/* Image */}
           <div className="flex justify-center">
@@ -66,7 +65,6 @@ export function AboutEraApacSection() {
             </Link>
           </div>
         </div>
-      </Container>
-    </section>
+    </Section>
   );
 }

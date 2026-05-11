@@ -1,15 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { colors } from "@/lib/theme";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export function ApacNetworkSection() {
   return (
-    <section className="pt-16 md:pt-32 pb-12 md:pb-24 bg-white">
-      <Container size="lg">
+    <Section bg="white" padding="none" className="pt-16 md:pt-32 pb-12 md:pb-24" containerClassName="max-w-6xl">
         {/* Title */}
         <div className="text-center mb-10">
           <h2 className="text-xl md:text-4xl font-bold leading-tight">
@@ -135,7 +134,6 @@ export function ApacNetworkSection() {
             </Link>
           </Button>
         </div>
-      </Container>
-    </section>
+    </Section>
   );
 }

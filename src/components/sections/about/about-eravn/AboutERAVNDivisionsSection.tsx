@@ -23,7 +23,7 @@ const divisions = [
 
 export default function AboutERAVNDivisionsSection() {
   return (
-    <Section id="divisions" padding="md" bg="gray" className="bg-gray-50/50" noContainer>
+    <Section id="divisions" padding="md" bg="white" noContainer>
       <Container size="lg">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function AboutERAVNDivisionsSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold" style={{ color: colors.primary.DEFAULT }}>
             HỆ THỐNG DIVISIONS
           </h2>
-          <h3 className="text-xl md:text-2xl font-bold mt-1" style={{ color: colors.primary.navy.DEFAULT }}>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-1" style={{ color: colors.primary.navy.DEFAULT }}>
             TẠI ERA VIETNAM
           </h3>
           <p className="mt-4 text-gray-500 max-w-3xl mx-auto text-sm md:text-base">
@@ -64,18 +64,18 @@ export default function AboutERAVNDivisionsSection() {
               <h4 className="mt-3 font-semibold text-sm" style={{ color: colors.primary.DEFAULT }}>
                 {person.name}
               </h4>
-              <p className="text-xs text-gray-500">{person.group}</p>
+              <p className="text-xs font-semibold" style={{ color: colors.primary.navy.DEFAULT }}>{person.group}</p>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center mt-10">
-          <Button variant="ghost" className="text-sm font-medium hover:underline mx-auto" style={{ color: colors.primary.DEFAULT }}>
+          <button className="inline-flex items-center gap-1 text-sm font-medium hover:underline transition-all" style={{ color: colors.primary.navy.DEFAULT }}>
             Xem thêm
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
-          </Button>
+          </button>
         </div>
       </Container>
     </Section>

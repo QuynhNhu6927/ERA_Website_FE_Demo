@@ -1,22 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { colors } from "@/lib/theme";
 
 const services = [
-  { title: "Môi giới dự án", bgColor: colors.primary.DEFAULT },
-  { title: "Tư vấn phát triển dự án", bgColor: colors.secondary.DEFAULT },
-  { title: "Môi giới nhà riêng lẻ", bgColor: colors.tertiary.orange.DEFAULT },
-  { title: "Nghiên cứu thị trường", bgColor: colors.tertiary.purple.DEFAULT },
-  { title: "Quản lý bất động sản", bgColor: colors.primary.navy.DEFAULT },
-  { title: "Môi giới M&A dự án", bgColor: "#64748b" },
+  { title: "Môi giới dự án", image: "/home/home_banner_hero_1.webp" },
+  { title: "Môi giới nhà riêng lẻ", image: "/home/home_banner_hero_2.webp" },
+  { title: "Tư vấn phát triển bất động sản", image: "/about/about_section02.webp" },
+  { title: "Nghiên cứu thị trường", image: "/about/about_apac_img.webp" },
+  { title: "Tư vấn & môi giới M&A dự án", image: "/join/join_envi.webp" },
+  { title: "Quản lý bất động sản", image: "/about/about_era_hero_banner.webp" },
 ];
 
 export default function AboutERAVNServicesSection() {
   return (
-    <Section id="services" padding="md" bg="white" noContainer>
+    <Section id="services" padding="md" bg="gray" noContainer>
       <Container size="lg">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,27 +43,15 @@ export default function AboutERAVNServicesSection() {
               transition={{ delay: index * 0.1 }}
               className="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer"
             >
-              <div
-                className="absolute inset-0 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center"
-                style={{ backgroundColor: service.bgColor + "15" }}
-              >
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke={service.bgColor}
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <path d="M21 15l-5-5L5 21" />
-                </svg>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-center">
                 <h3 className="text-white font-semibold text-lg">{service.title}</h3>
               </div>
             </motion.div>

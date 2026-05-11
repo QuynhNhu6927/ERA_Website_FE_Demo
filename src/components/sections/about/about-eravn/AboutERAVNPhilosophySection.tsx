@@ -18,7 +18,7 @@ export default function AboutERAVNPhilosophySection() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <Section id="philosophy" padding="md" bg="gray" className="bg-gray-50/50" noContainer>
+    <Section id="philosophy" padding="md" bg="white" noContainer>
       <Container size="lg">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

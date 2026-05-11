@@ -40,7 +40,7 @@ const RING_OUTER_ITEMS: OrbitItem[] = [
   {
     logo: "/join/join_croran.webp",
     title: "CORCORAN",
-    description: "Tôn vinh phong cách sống độc bảnbản. Dịch vụ môi giới 'may đo' cao cấp, thấu hiểu sâu sắc gu thẩm mỹ của giới tinh hoa thành thị.",
+    description: "Tôn vinh phong cách sống độc bản. Dịch vụ môi giới 'may đo' cao cấp, thấu hiểu sâu sắc gu thẩm mỹ của giới tinh hoa thành thị.",
   },
   {
     logo: "/join/join_christies.webp",
