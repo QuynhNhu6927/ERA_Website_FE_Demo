@@ -4,7 +4,7 @@ import { ProjectsPage } from "@/components/sections/projects";
 export const metadata: Metadata = {
   title: "Dự án Bất động sản - ERA Vietnam",
   description:
-    "Khám phá danh mục dự án được chọn lọc khắt khe nhất từ ERA Vietnam. Căn hộ, nhà phố, biệt thự, đất nền từ các chủ đầu tư uy tín.",
+    "Khám phá rổ hàng 150+ dự án BĐS đa dạng phân khúc từ các CĐT uy tín. Danh mục Tâm điểm giao dịch và Đầu tư tối ưu được xác thực bởi chuyên gia ERA Vietnam.",
   keywords: [
     "dự án bất động sản",
     "căn hộ ERA",
@@ -16,9 +16,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dự án Bất động sản - ERA Vietnam",
     description:
-      "Khám phá danh mục dự án được chọn lọc khắt khe nhất từ ERA Vietnam.",
+      "Khám phá rổ hàng 150+ dự án BĐS đa dạng phân khúc từ các CĐT uy tín. Danh mục Tâm điểm giao dịch và Đầu tư tối ưu được xác thực bởi chuyên gia ERA Vietnam.",
     type: "website",
-    images: [],
+    images: [
+      {
+        url: "/project/project_hero_banner.webp",
+        alt: "ERA Vietnam",
+      },
+    ],
   },
 };
 
