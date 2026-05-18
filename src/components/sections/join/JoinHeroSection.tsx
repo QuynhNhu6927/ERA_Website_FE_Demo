@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { colors } from "@/lib/theme";
 import { CircleCheck } from "lucide-react";
 
@@ -72,6 +73,47 @@ export function JoinHeroSection() {
                   </li>
                 ))}
               </ul>
+
+              {/* Desktop CTA Buttons */}
+              <div className="hidden md:flex items-center gap-4 mt-8">
+                <Button asChild variant="primary" size="md">
+                  <a href="https://app.era.com.vn/register" className="gap-2">
+                    Gia nhập ERA ngay
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 12L10 8L6 4"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="secondary"
+                  size="md"
+                  style={{ backgroundColor: colors.secondary.DEFAULT }}
+                >
+                  <a href="https://zalo.me/0325381107" target="_blank" rel="noopener noreferrer" className="gap-2">
+                    <Image
+                      src="/shared/zalo_icon.svg"
+                      alt="Zalo"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
+                    />
+                    Tư vấn qua Zalo
+                  </a>
+                </Button>
+              </div>
             </div>
 
             <div className="absolute bottom-0 right-0 z-10 w-[60%] lg:w-[50%] max-w-2xl">

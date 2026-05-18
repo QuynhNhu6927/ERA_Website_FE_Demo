@@ -6,8 +6,8 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { colors } from "@/lib/theme";
 
-const NewsRichEditor = dynamic(
-  () => import("./NewsRichEditor"),
+const RichEditor = dynamic(
+  () => import("@/components/shared/RichEditor"),
   {
     ssr: false,
     loading: () => (
@@ -156,7 +156,7 @@ export default function NewsManageSection() {
                 Nội dung chi tiết <span style={{ color: colors.primary.DEFAULT }}>*</span>
               </label>
               <div className="rounded-xl border-2 border-gray-200 overflow-hidden focus-within:border-[#C8102E] focus-within:ring-4 focus-within:ring-[#C8102E]/10 transition-all duration-200">
-                <NewsRichEditor value={content} onChange={setContent} />
+                <RichEditor value={content} onChange={setContent} />
               </div>
             </div>
           </div>
