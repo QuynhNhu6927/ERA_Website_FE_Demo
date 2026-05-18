@@ -163,45 +163,6 @@ export function JoinCompassSection() {
                   giá trị bản thân trong một hệ sinh thái chuyên nghiệp, chuẩn mực
                   toàn cầu.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-5">
-                  <Button asChild variant="primary" size="md">
-                    <a href="https://app.era.com.vn/register" className="gap-2">
-                      Gia nhập ERA ngay
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6 12L10 8L6 4"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="secondary"
-                    size="md"
-                    style={{ backgroundColor: colors.secondary.DEFAULT }}
-                  >
-                    <a href="https://zalo.me/0325381107" target="_blank" rel="noopener noreferrer" className="gap-2">
-                      <Image
-                        src="/shared/zalo_icon.svg"
-                        alt="Zalo"
-                        width={20}
-                        height={20}
-                        className="w-5 h-5"
-                      />
-                      Tư vấn qua Zalo
-                    </a>
-                  </Button>
-                </div>
               </InfoBlock>
             </div>
           </div>
@@ -210,7 +171,7 @@ export function JoinCompassSection() {
         {/* Mobile */}
         <div className="lg:hidden flex flex-col items-center gap-6">
           {/* CTA Button */}
-          <Button asChild variant="primary" size="md" className="w-full">
+          <Button asChild variant="primary" size="md" className="w-full border-2 border-white" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.25)" }}>
             <a href={ROUTES.apply} className="gap-2 justify-center">
               Gia nhập ERA ngay
               <svg
@@ -342,8 +303,8 @@ export function JoinCompassSection() {
               asChild
               variant="primary"
               size="md"
-              className="w-full"
-              style={{ backgroundColor: colors.primary.navy.DEFAULT }}
+              className="w-full border-2 border-white"
+              style={{ backgroundColor: colors.primary.navy.DEFAULT, boxShadow: "0 4px 20px rgba(0,0,0,0.25)" }}
             >
               <a href={ROUTES.eraVn} className="gap-2 justify-center">
                 Về ERA Vietnam
